@@ -33,6 +33,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
 }
 
 body {
@@ -40,11 +41,47 @@ body {
   padding: 2.5rem;
   border-radius: 2.5rem;
   width: 50%;
+  margin: 0;
 }
 
 img {
   width: 100%;
   border-radius: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  html {
+    background-color: var(--White);
+    padding: 0rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+
+  body {
+    /* background-color: var(--White); */
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  main {
+    padding: 1.5rem 4rem 4rem 4rem;
+    margin: 0;
+  }
+
+  main h1 {
+    margin-top: 0;
+  }
 }
 
 h1,
@@ -96,15 +133,23 @@ table {
   border-collapse: collapse;
 }
 
-tr {
+table tr th,
+td {
+  padding: 5px;
+}
+
+table tr {
   border: solid;
   border-width: 1px 0;
   border-color: var(--LightGrey);
 }
 
-table tr th,
-td {
-  padding: 5px;
+table tr:first-child {
+  border-top: none;
+}
+
+table tr:last-child {
+  border-bottom: none;
 }
 
 table tr th {
